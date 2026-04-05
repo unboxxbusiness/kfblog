@@ -1,0 +1,16 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/revalidate",
+      "schedule": "0 * * * *"
+    },
+    {
+      "path": "/api/cron/submit-sitemap",
+      "schedule": "0 6 * * *"
+    },
+    {
+      "path": "/api/cron/index-new-pages",
+      "schedule": "*/15 * * * *"
+    }
+  ]
+}

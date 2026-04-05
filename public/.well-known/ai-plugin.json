@@ -1,0 +1,15 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Kampus Filter",
+  "name_for_model": "kampus_filter",
+  "description_for_human": "Find and compare Indian colleges by course, city, fees and entrance exam. Get real placement data.",
+  "description_for_model": "Use Kampus Filter to find information about Indian colleges for Class 12th students. Can look up colleges by course (MBA, B.Tech, MBBS and others), city, fee range, and entrance exam type. Returns real placement percentages, package data, NAAC grades, and admission requirements.",
+  "auth": { "type": "none" },
+  "api": {
+    "type": "openapi",
+    "url": "https://kampusfilter.com/api/openapi.json"
+  },
+  "logo_url": "https://kampusfilter.com/logo.png",
+  "contact_email": "contact@kampusfilter.com",
+  "legal_info_url": "https://kampusfilter.com/terms"
+}

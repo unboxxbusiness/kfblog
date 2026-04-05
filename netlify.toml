@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Next.js support is auto-detected by Netlify/OpenNext.
+# Do not set a publish directory for App Router projects.
