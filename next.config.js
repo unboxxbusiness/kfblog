@@ -1,5 +1,16 @@
 /** @type {import('next').NextConfig} */
-const defaultImageHosts = ['zzpbknqpjnkjkebzetnh.supabase.co', 'kampusfilter.com']
+function getSupabaseHostFromEnv() {
+  const rawUrl = String(process.env.NEXT_PUBLIC_SUPABASE_URL || '').trim()
+  if (!rawUrl) return ''
+
+  try {
+    return new URL(rawUrl).hostname
+  } catch {
+    return ''
+  }
+}
+
+const defaultImageHosts = [getSupabaseHostFromEnv(), 'kampusfilter.com'].filter(Boolean)
 const configuredImageHosts = String(process.env.NEXT_PUBLIC_ALLOWED_IMAGE_HOSTS || defaultImageHosts.join(','))
   .split(',')
   .map((host) => host.trim())

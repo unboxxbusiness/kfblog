@@ -3,6 +3,8 @@
 
 [build.environment]
   NODE_VERSION = "20"
+  # NEXT_PUBLIC_* Supabase values are intentionally public and embedded in client bundles.
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SUPABASE_ANON_KEY,NEXT_PUBLIC_SUPABASE_URL"
 
 # Next.js support is auto-detected by Netlify/OpenNext.
 # Do not set a publish directory for App Router projects.

@@ -17,14 +17,14 @@ const currentYear = new Date().getFullYear()
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || process.env.NEXT_PUBLIC_SITE_URL || 'https://kampusfilter.com'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-let supabaseOrigin = 'https://zzpbknqpjnkjkebzetnh.supabase.co'
+let supabaseOrigin = ''
 
 try {
   if (supabaseUrl) {
     supabaseOrigin = new URL(supabaseUrl).origin
   }
 } catch {
-  // Keep default origin fallback when environment value is malformed.
+  // Skip Supabase preconnect links when environment value is malformed.
 }
 
 export const metadata: Metadata = {
@@ -123,8 +123,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href={supabaseOrigin} />
-        <link rel="dns-prefetch" href={supabaseOrigin} />
+        {supabaseOrigin ? <link rel="preconnect" href={supabaseOrigin} /> : null}
+        {supabaseOrigin ? <link rel="dns-prefetch" href={supabaseOrigin} /> : null}
 
         <link rel="prefetch" href="/apply" />
         <link rel="prefetch" href="/search" />
