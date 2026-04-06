@@ -4,9 +4,9 @@
 [build.environment]
   NODE_VERSION = "20"
   # NEXT_PUBLIC_* values are intentionally public and embedded in client bundles.
-  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SUPABASE_ANON_KEY,NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_REVALIDATE_SECONDS,NEXT_PUBLIC_SITE_URL"
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SUPABASE_ANON_KEY,NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_REVALIDATE_SECONDS,NEXT_PUBLIC_SITE_URL,SEO_AUDIT_BASE_URL"
   # Next.js build artifacts can include public client values and token-like response headers.
-  SECRETS_SCAN_OMIT_PATHS = ".next/cache/fetch-cache/**,.next/static/chunks/**,.next/server/chunks/**,.next/server/edge/chunks/**"
+  SECRETS_SCAN_OMIT_PATHS = ".next/cache/fetch-cache/**,.next/static/chunks/**,.next/server/chunks/**,.next/server/edge/chunks/**,.netlify/.next/**"
 
 # Next.js support is auto-detected by Netlify/OpenNext.
 # Do not set a publish directory for App Router projects.
