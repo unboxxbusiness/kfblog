@@ -5,6 +5,8 @@
   NODE_VERSION = "20"
   # NEXT_PUBLIC_* values are intentionally public and embedded in client bundles.
   SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SUPABASE_ANON_KEY,NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_REVALIDATE_SECONDS,NEXT_PUBLIC_SITE_URL"
+  # Next.js fetch-cache artifacts can contain token-like response headers from external APIs.
+  SECRETS_SCAN_OMIT_PATHS = ".next/cache/fetch-cache/**"
 
 # Next.js support is auto-detected by Netlify/OpenNext.
 # Do not set a publish directory for App Router projects.
