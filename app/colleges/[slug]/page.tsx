@@ -237,8 +237,13 @@ export default async function CollegePage({ params }: { params: { slug: string }
               <h3 className="text-lg font-bold text-[#14213d]">Private College Advantages</h3>
               <ul className="space-y-3">
                 {(content.private_vs_govt.private_advantages || []).map((adv: string, i: number) => (
-                  <li key={i} className="flex gap-3 text-[#333333]">
-                    <span className="text-[#fca311] mt-0.5">?</span> {adv}
+                  <li key={i} className="flex items-start gap-3 text-[#333333]">
+                    <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#fff1db] text-[#fca311]" aria-hidden="true">
+                      <svg viewBox="0 0 20 20" className="h-3.5 w-3.5 fill-current">
+                        <path d="M16.704 5.29a1 1 0 00-1.408-1.418l-6.157 6.113-2.435-2.435a1 1 0 10-1.414 1.414l3.14 3.14a1 1 0 001.412.002l6.862-6.816z" />
+                      </svg>
+                    </span>
+                    <span>{adv}</span>
                   </li>
                 ))}
               </ul>
@@ -247,8 +252,13 @@ export default async function CollegePage({ params }: { params: { slug: string }
               <h3 className="text-lg font-bold text-[#14213d]">Govt College Advantages</h3>
               <ul className="space-y-3">
                 {(content.private_vs_govt.govt_advantages || []).map((adv: string, i: number) => (
-                  <li key={i} className="flex gap-3 text-[#333333]">
-                    <span className="text-[#fca311] mt-0.5">?</span> {adv}
+                  <li key={i} className="flex items-start gap-3 text-[#333333]">
+                    <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#fff1db] text-[#fca311]" aria-hidden="true">
+                      <svg viewBox="0 0 20 20" className="h-3.5 w-3.5 fill-current">
+                        <path d="M16.704 5.29a1 1 0 00-1.408-1.418l-6.157 6.113-2.435-2.435a1 1 0 10-1.414 1.414l3.14 3.14a1 1 0 001.412.002l6.862-6.816z" />
+                      </svg>
+                    </span>
+                    <span>{adv}</span>
                   </li>
                 ))}
               </ul>
